@@ -14,9 +14,6 @@ export default class Product extends Entity implements ProductInterface{
         this._name = name;
         this._price = price;
         this.validate();
-        
-        if(this.notification.hasErrors())
-            throw new NotificationError(this.notification.errors);
     }
 
     get id(): string {
